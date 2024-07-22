@@ -31,3 +31,6 @@ The program runs in a loop, repeatedly asking for input and performing conversio
     Feet to Meters: Quantity * 0.305
     Pounds to Kilograms: Quantity * 0.454
     Fahrenheit to Celsius: (Quantity - 32) * (5.0 / 9.0)
+# OUTPUT
+<img src="https://github.com/user-attachments/assets/cd65bdd0-e5db-4c2b-bb2d-9471346fa60d" />
+
