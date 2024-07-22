@@ -1,21 +1,23 @@
 package convertioninput;
+import java.util.InputMismatchException;
 import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 public class ConvertionInput
 {
     public static void main(String[] args) 
     {
-            Scanner input = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
+        try {
             boolean status = true;
             while(status)
             {
                 System.out.print("Enter unit you want to convert from (feet/Pounds/Fahrenheit ):");
                 String convertFrom = input.nextLine();
-
+                
                 System.out.print("Enter unit you want to convert to :(Meters/Kgs/Celsius ):");
                 String convertTo = input.nextLine();
-
-
+                
                 System.out.print("Enter Quantity to be convert :");
                 double Quantity = input.nextDouble();
                 input.nextLine();
@@ -51,6 +53,14 @@ public class ConvertionInput
                 }
             }
             System.out.println(">>>>>>>>>>>>>>>>>>>>THANK YOU<<<<<<<<<<<<<<<<<<<");
+        }
+        catch(InputMismatchException e)
+        {
+            System.out.println("Please enter only a digit as quatity\n"+e.getMessage());
+        }
+         catch (Exception e) {
+            System.out.println("Something went wrong!!!!!!!");
+        }   
             
     }
     public static double FeetToMeters(double Quantity)
